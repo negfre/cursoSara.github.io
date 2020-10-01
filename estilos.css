@@ -1,0 +1,490 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box; 
+}
+
+.body{
+     font-family: 'Rowdies', cursive;/* tipo de letra */
+
+    /* font-family: 'Roboto', sans-serif;  */
+}
+h1, h2, h3, h4{
+     color: #bd7f4c; /*color a todos los titulos */
+    font-weight: 300;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1000px ; /*maximo de ancho */
+     margin: auto;      /*centra todo */
+     overflow: hidden; /* esconde o corta los margenes de las imagenes o */
+     border: 2px ; /*borde punteado*/
+}
+.contenedor1{
+    width: 90%;
+    max-width: 1000px ; /*maximo de ancho */
+     margin: auto;      /*centra todo */
+     overflow: hidden; /* esconde o corta los margenes de las imagenes o */
+     border: 2px dotted rgba(255, 255, 255, 0); /*borde punteado*/
+}
+
+
+h1{
+    font-size: 50px; /*solo al titulo principal un tamaño de 50px*/
+}
+
+
+
+nav{
+ background: rgb(190, 142, 108);
+ width: 100%;
+ height: 80px;    
+ box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2); /* esto crea una sombra debajo de los items*/
+ position:fixed ; /*esto fija el bloque de la barra de navegacion*/
+ top: 0;
+ z-index: 100;
+ font-family: cursive;
+ /* transition: ease-in-out 0.5s; */
+ 
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    padding: 0 40px;
+    
+}
+.nav .logo {
+    height: 80px;
+}
+.nav .logo img{
+    height: 100%;
+    vertical-align: auto;
+}
+
+.enlaces-header{
+    font-weight: 300;
+}
+
+.enlaces-header a:hover { /*esto crea un borde  cuando pasamos el mouse por cada item del menu*/
+    border-bottom: 3px solid white;
+}
+
+.nav .enlaces-header a{
+    color: #f7f7f7;
+    text-decoration: none;
+    padding: 0 3px;
+
+}
+
+.contenido-header{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-img img{
+height: 564px;
+width: 564px;
+
+}
+
+
+.contenido-header >img{ 
+    width: 500px;
+    animation: ease-in animat 2s; /*esta animacion se combina con la propiedad @keyframes para hacer la animacion*/
+}
+
+@keyframes animat{ /*esto es una animacion para la image principal*/
+    0%{
+        transform: scale(0);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+.textos-header{
+    margin: 0 0 0 30px; /* Recuerden primer valor top right bottom left */
+    font-family: cursive;
+}
+
+.contenido-header p{
+    font-weight: 100;
+    margin-top: 14px;
+    color: #000000;
+
+}
+
+.contenido-header a{
+    margin: 28px;
+    width: 130px;
+    display: inline-block; /* es necesario transformar esta etiqueta de elemento inline a block con este display: inline-block*/
+    background:rgb(190, 142, 108);
+    text-align: center;
+    color: #fff;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400; 
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(104, 103, 103, 0.602);/*Esto crea una sombra al boton*/
+}
+
+.titulo{
+    font-size: 50px;
+    font-family: cursive;
+    color: rgb(190, 142, 108);
+}
+
+
+/* acerca de nosotrtos o about-us */
+
+.about-us{
+    background: #f2f2f2;
+
+}
+
+.contenedor-articulo{
+    display: flex;
+    flex-wrap: wrap ;
+    margin-top: 60px;
+    justify-content: space-around;
+}
+
+.articulo{
+    width: 29%;
+    background: rgba(149, 174, 179, 0.199);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+}
+
+.articulo:hover{
+    box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
+}
+.articulo>i{
+    font-size: 30px;
+    color: #fff;
+    background: rgb(190, 142, 108);
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align:center ;
+    padding-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(214, 169, 96, 0.781);
+}
+.articulo>h3{
+    font-size: 24px;
+
+}
+.articulo>p{
+    font-weight: 100;
+    color: rgb(190, 142, 108);
+    margin-top: 15px;
+    padding-bottom: 20px;
+
+}
+
+.articulo>a{
+    color: #5d6678;
+    font-weight: 400;
+    text-decoration: none;
+}
+.articulo h3{
+    margin-top: 10px; 
+}
+
+.articulo>a:hover{
+    color: rgb(190, 142, 108);
+    transition: color .5s ;
+}
+
+/* pregunta*/
+
+.questions {
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.questions >img{
+    width: 550px;
+    animation: ease-in animat 2s;
+    height: 225px;
+    width: 225px;
+
+}
+.textos-questions{
+    margin: 0 0 0 30px;
+    font-family: cursive;
+}
+
+.textos-questions p{
+    font-weight: 100;
+    margin-top: 14px;
+    color: #bd8a48;
+    
+
+}
+
+.textos-questions>a{
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: inline-block;
+    background: rgb(190, 142, 108);
+    text-align: center;
+    color: #fff;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgb(190, 142, 108);
+    
+}
+
+/* Resultadoss     */
+
+.results{
+    background: rgb(190, 142, 108);
+    padding-top: 30px;
+    background: rgb(190, 142, 108);
+}
+
+.conten-results{
+    display: flex;
+    justify-content: space-evenly;
+}
+.numbers{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.numbers .number{
+    width: 45%;
+    background: rgba(255,255,255,.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 40px 35px;
+    margin-bottom: 20px;
+}
+
+.numbers .number h4{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+
+.numbers .number p{
+    color: #f2f5fc;
+    font-weight: 300;
+
+}
+
+
+
+.results-text h4{
+    width: 100%;
+    color: #fff;
+    font-size: 40px;
+    font-family: cursive;
+}
+
+.results-text p{
+    color: #fff;
+    font-weight: 300;
+    margin: 20px 0;
+
+}
+
+.results-text>a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 10px 0;
+    width: 120px;
+    text-align: center; /*alinea eltexto interno*/
+    border-radius: 5px;
+}
+
+
+
+/* Servicios */
+
+.services{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.services >img{
+    height: 307px;
+    width: 307px;
+}
+
+.box-skills{
+    margin: 30px 30px 0 0;
+}
+
+.box-skills h4{
+    font-size: 24px;
+    background: #f2f2f2;
+    width: 350px;
+    padding:  10px 0 10px 15px;
+    margin-bottom: 10px;
+}
+.box-skills i{
+    color: rgb(190, 142, 108) ;
+    font-size: 20px;
+}
+
+footer{
+    background:rgb(190, 142, 108);
+    padding: 60px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.partFooter{
+    width: 20%;
+    text-align: center;
+}
+.partFooter h4{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.partFooter a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 300;
+    transition: color .3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+
+.partFooter a:hover{
+    color: rgb(190, 142, 108);
+}
+.partFooter img{
+    width: 70%;
+}
+
+.social-media i{
+    font-size: 20px;
+    display: inline-block;
+    color: #fafafa;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    cursor: pointer; /*esto hace todo el circulo sensible al mouse*/
+    margin-top: 20px;
+    text-align: center;
+    
+    margin-right: 5px;
+}
+
+.social-media i:hover{
+    color: #fff;
+    background-color: rgb(190, 142, 108);
+    border-color: rgb(190, 142, 108);
+}
+
+.titulo-services h2{
+    width: auto;
+        font-family: cursive;
+        font-size: 40px;
+        padding: 20px;
+        
+
+/*hacerlo responsible no es parte del curso pero es muy facil, Esta parte es para hacer responsible a un ancho de 800px avanza*/
+@media screen and (max-width:800px){
+    .titulo{
+        font-size: 45px;
+    }
+
+    .contenido-header{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 720px;
+    }
+
+    .contenido-header>img{
+        width: 400px;
+    }
+    .textos-header{
+        margin: 0;
+
+    }
+    .articulo{
+        width: 45%;
+    }
+
+    .questions{
+        height: 720px;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .questions>img{
+        width: 400px;
+    }
+
+    /* result */
+    .conten-results{
+        flex-direction: column-reverse;
+    }
+    .results-text>a{
+        margin-bottom: 60px;
+    }
+    .numbers{
+        width: 100%;
+    }
+    .results-text{
+        width: 100%;
+    }
+
+    /* services */
+
+    }
+    .services{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .box-skills{
+        margin: 0 0 40px 0;
+        
+    }
+    .box-skills h4{
+        width: 500px;
+    }
+    .services>img{
+        width: 400px;
+    }
+
+    footer{
+        justify-content: space-evenly;
+    }
+    .partFooter{
+        width: 40px;
+        margin-bottom: 40px;
+    }
+
